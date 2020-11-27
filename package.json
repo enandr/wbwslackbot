@@ -1,0 +1,26 @@
+{
+  "name": "wbwslackbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enandr/wbwslackbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enandr/wbwslackbot/issues"
+  },
+  "homepage": "https://github.com/enandr/wbwslackbot#readme",
+  "dependencies": {
+    "@slack/events-api": "^2.3.4",
+    "@slack/web-api": "^5.14.0",
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0"
+  }
+}
