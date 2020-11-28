@@ -18,13 +18,13 @@ slackEvents.on('app_mention', (event) => {
   mention.slice(0,1);
   switch (mention[0]){
     case 'hi':
-      sendMessage('bot', `Thanks for saying hi.`);
+      sendMessage(event.channel, `Thanks for saying hi.`);
       break;
     case 'help':
-      sendMessage('bot', `Need help?`);
+      sendMessage(event.channel, `Need help?`);
       break;
     default:
-      sendMessage('bot', `I repeat, ${mention.join(' ')}`);
+      sendMessage(event.channel, `I repeat, ${mention.join(' ')}`);
       break;
   }
 });
@@ -49,7 +49,7 @@ async function sendMessage(channel, message){
   try {
     // Use the `chat.postMessage` method to send a message from this app
     await web.chat.postMessage({
-      channel: `#${channel}`,
+      channel: channel,
       text: message,
     });
   } catch (error) {
