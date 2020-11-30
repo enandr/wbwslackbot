@@ -10,7 +10,7 @@ const slackEvents = createEventAdapter(slackSigningSecret);
 const port = 3000;
 // sendMessage('bot',`The current time is ${currentTime}`);
 startEvents();
-
+sendMessage('bot', `hello world`);
 
 slackEvents.on('app_mention', (event) => {
   let mention = event.text.slice(15);
